@@ -1,0 +1,25 @@
+<header>
+    <div>
+        <h4>ANGULAR-TASK</h4>
+    </div>
+</header>
+<div class="main">
+    <div>
+        <form >
+            <h1>Login</h1>
+            <p>Please login to your admin account to post a new blog post</p>
+            <input  [(ngModel)]="EmailId" name="EmailId" type="text" placeholder="Email" required>
+               <!-- Validators qo'shiladi -->
+            <input [(ngModel)]="Password" name="Password"  type="password" placeholder="Password" required>
+    <!-- Validators qo'shiladi -->
+            <button (click)="Onlogin()" >Login</button>
+        </form>
+    </div>
+
+</div>
+<footer>
+    <div>
+        <div class="footers">ANGULAR-TASK</div>
+    </div>
+
+</footer>

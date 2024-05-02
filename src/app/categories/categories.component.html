@@ -1,0 +1,37 @@
+<header>
+    <div>
+        <div class="angular_task">
+            <h4>ANGULAR-TASK</h4>
+        </div>
+
+    </div>
+    <div class="email_button">
+        <a href="#">example@gmail.com</a>
+        <!-- <button mat-flat-button color="primary">Logout</button> -->
+        <a mat-raised-button target="_blank" routerLink="/login">Logut</a>
+    </div>
+</header>
+
+<div class="main">
+    <div class="content-page">
+        <div class="page_todo">
+            <div>
+                <h1>Add Categories</h1>
+                <p>You can add Add categories from here..?</p>
+                <input class="form-control" type="text" placeholder=" New" [(ngModel)]="newTodo"> <button mat-raised-button color="green" (click)="saveTodo()">Add Categoires</button>
+            </div>
+        </div>
+    </div>
+    <div class="page_table"> <table class="tables">
+        <tbody>
+            <tr *ngFor="let todos of todos; let i = index;">
+                <th scope="row">{{i+1}}</th>
+                <td class="{{(!todos.isCompleted)?'done':''}}" (click)="done(i)">{{todos.name}}</td>
+                <td> <button mat-fab color="primary" (click)="remove(i)"  aria-label="Example icon button with a delete icon">
+                    <mat-icon>delete</mat-icon>
+                  </button> <button mat-fab color="warn" aria-label="Example icon button with a edit icon"> <mat-icon>edit</mat-icon></button></td>
+            </tr>
+        </tbody>
+    </table></div>
+   
+</div>
